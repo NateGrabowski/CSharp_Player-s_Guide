@@ -8,8 +8,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Part 1\" />
-  </ItemGroup>
-
 </Project>
