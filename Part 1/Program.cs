@@ -63,32 +63,110 @@
 #endregion
 
 #region Buying Inventory / Discounted Inventory
-Console.WriteLine("The following items are available\n1 -- Rope\n2 -- Torches\n3 -- Climbing Equipment\n4 -- Clean Water\n5 -- Machete\nWhat number do you want to see the price of?");
-int numChoice = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Do you have any secret passcodes to enter? ");
-string passCode = Console.ReadLine();
-if (passCode == "cheese")
-{
-    string response = numChoice switch
-    {
-        1 => $"Rope is {10 / 2} gold",
-        2 => $"Torch is {15 / 2} gold",
-        3 => $"Climbing Equipment is {25 / 2} gold",
-        4 => $"Clean Water is 1 gold",
-        5 => $"Machete.... here you go kind sir"
-    };
-    Console.WriteLine(response);
-}
-else
-{
-    string response = numChoice switch
-    {
-        1 => $"Rope is 10 gold",
-        2 => $"Torch is 15 gold",
-        3 => $"Climbing Equipment is 25 gold",
-        4 => $"Clean Water is 1 gold",
-        5 => $"Machete.... that will cost your liver!"
-    };
-    Console.WriteLine(response);
-}
+//Console.WriteLine("The following items are available\n1 -- Rope\n2 -- Torches\n3 -- Climbing Equipment\n4 -- Clean Water\n5 -- Machete\nWhat number do you want to see the price of?");
+//int numChoice = Convert.ToInt16(Console.ReadLine());
+//Console.WriteLine("Do you have any secret passcodes to enter? ");
+//string passCode = Console.ReadLine();
+//if (passCode == "cheese")
+//{
+//    string response = numChoice switch
+//    {
+//        1 => $"Rope is {10 / 2} gold",
+//        2 => $"Torch is {15 / 2} gold",
+//        3 => $"Climbing Equipment is {25 / 2} gold",
+//        4 => $"Clean Water is 1 gold",
+//        5 => $"Machete.... here you go kind sir"
+//    };
+//    Console.WriteLine(response);
+//}
+//else
+//{
+//    string response = numChoice switch
+//    {
+//        1 => $"Rope is 10 gold",
+//        2 => $"Torch is 15 gold",
+//        3 => $"Climbing Equipment is 25 gold",
+//        4 => $"Clean Water is 1 gold",
+//        5 => $"Machete.... that will cost your liver!"
+//    };
+//    Console.WriteLine(response);
+//}
 #endregion
+
+#region The Prototype
+//Console.WriteLine("Enter a number between 0 and 50");
+//int numSet = Convert.ToInt32(Console.ReadLine());
+//Console.Clear();
+//Console.WriteLine("What is your guess to the number?");
+//int guess = Convert.ToInt32(Console.ReadLine());
+
+
+//while (numSet != guess)
+//{
+//    if (guess > numSet) { Console.WriteLine("Number is too high"); }
+//    else if (guess < numSet) { Console.WriteLine("Number is too low"); }
+//    Console.Write("Try again: ");
+//    guess = Convert.ToInt32(Console.ReadLine());
+//}
+//Console.WriteLine("Congrats you got it");
+
+#endregion
+
+#region The Magic Cannon
+/*
+ * Skorin, a member of Consolas’s wall guard, has constructed a magic cannon that draws power from two
+gems: a fire gem and an electric gem. Every third turn of a crank, the fire gem activates, and the cannon
+produces a fire blast. The electric gem activates every fifth turn of the crank, and the cannon makes an
+electric blast. When the two line up, it generates a potent combined blast. Skorin would like your help to
+produce a program that can warn the crew about which turns of the crank will produce the different
+blasts before they do it.
+*/
+
+//for (int i = 1; i <= 100; i++)
+//{
+
+//    if (i % 5 == 0 && i % 3 == 0) { Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine($"{i}: Combined Blast"); }
+//    else if (i % 3 == 0) { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine($"{i}: Fire Blast"); }
+//    else if (i % 5 == 0) { Console.ForegroundColor = ConsoleColor.Yellow; Console.WriteLine($"{i}: Electric Blast"); }
+//    else { Console.ForegroundColor = ConsoleColor.White; Console.WriteLine($"{i}: Normal"); }
+
+//}
+
+#endregion
+
+#region The Replicator of D'To
+
+//int[] ints = new int[5];
+
+//for (int i = 0; i < ints.Length; i++)
+//{
+//    Console.WriteLine($"Enter number {i + 1}: ");
+//    int numPlacer = Convert.ToInt32(Console.ReadLine());
+//    ints[i] += numPlacer;
+//}
+
+//for (int i = 0; i < ints.Length; i++)
+//{
+//    Console.WriteLine($"Array ints[{i}] = {ints[i]}");
+//}
+
+//int[] ints2 = ints[0..5]; //ommitted to creating another for loop and wanted to try something else
+
+//for (int i = 0; i < ints.Length; i++)
+//{
+//    Console.WriteLine($"Array ints2[{i}] = {ints2[i]}");
+//}
+
+
+#endregion
+
+#region The Laws of Freach
+//int[] ints = new int[] { 1, 2, 5, 7, 9 };
+
+//foreach (var item in ints)
+//{
+//    Console.WriteLine(item);
+//}
+
+#endregion
+
