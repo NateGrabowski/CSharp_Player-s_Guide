@@ -34,12 +34,12 @@
 //Defense(row, column);
 
 //void Defense(int row, int column)
-{
-    //Console.ForegroundColor = ConsoleColor.Green;
-    //Console.WriteLine($"Troops are being sent out to surround the ship!\nDeployed troops at:\n({row}, {column - 1})\n({row - 1}, {column})\n({row}, {column + 1})\n({row + 1}, {column}) ");
-    //Console.Beep();
-    //Console.ResetColor();
-}
+//{
+//    Console.ForegroundColor = ConsoleColor.Green;
+//    Console.WriteLine($"Troops are being sent out to surround the ship!\nDeployed troops at:\n({row}, {column - 1})\n({row - 1}, {column})\n({row}, {column + 1})\n({row + 1}, {column}) ");
+//    Console.Beep();
+//    Console.ResetColor();
+//}
 #endregion
 
 #region Reparing the Clocktower
@@ -94,8 +94,7 @@
 #endregion
 
 #region The Prototype
-//Console.WriteLine("Enter a number between 0 and 50");
-//int numSet = Convert.ToInt32(Console.ReadLine());
+//int numSet = AskForNumber("Enter a number between 0 and 50", 1);
 //Console.Clear();
 //Console.WriteLine("What is your guess to the number?");
 //int guess = Convert.ToInt32(Console.ReadLine());
@@ -167,6 +166,57 @@ blasts before they do it.
 //{
 //    Console.WriteLine(item);
 //}
+
+#endregion
+
+#region Taking a Number ---includes method AskForNumber & AskForNumberInRange
+int AskForNumber(string text, int type = 0)
+{
+    if (type == 0)
+    {
+        Console.Write($"{text} ");
+        var x = Console.ReadLine();
+        return Convert.ToInt32(x);
+    }
+    else
+    {
+        Console.WriteLine(text);
+        var x = Console.ReadLine();
+        return Convert.ToInt32(x);
+    }
+}
+
+int AskForNumberInRange(string text, int min, int max)
+{
+    while (true)
+    {
+        int number = AskForNumber(text);
+        if (number >= min && number <= max)
+            return number;
+    }
+}
+
+//var x = AskForNumber("What is a number?");
+//Console.WriteLine(x);
+
+
+
+#endregion
+
+#region Countdown
+
+//int Countdown(int number)
+//{
+//    if (number == 1) { Console.WriteLine("1"); return 1; }
+//    else
+//    {
+//        Console.WriteLine(number);
+//        return Countdown(number - 1);
+//    }
+//}
+
+//Countdown(10);
+
 
 #endregion
 
