@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-CraftArrow arrow = new(65, CraftArrow.ArrowheadType.steel, CraftArrow.FletchingType.turkey_feathers);
+﻿CraftArrow arrow = new(65, CraftArrow.ArrowheadType.steel, CraftArrow.FletchingType.turkey_feathers);
 class CraftArrow
 {
     private int _length;
@@ -9,8 +7,8 @@ class CraftArrow
     public enum ArrowheadType { steel, wood, obsidian }
     public enum FletchingType { plastic, turkey_feathers, goose_feathers }
     public int Length { get; private set; }
-    public ArrowheadType GetArrowheadType { get; }
-    public FletchingType GetFletchingType { get; }
+    public ArrowheadType GetArrowheadType { get; private set; }
+    public FletchingType GetFletchingType { get; private set; }
 
     public CraftArrow(int length = 60, ArrowheadType arrowHeadType, FletchingType fletchingType)
     {
