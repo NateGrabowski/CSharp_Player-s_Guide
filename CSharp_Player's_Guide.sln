@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Part 1", "Part 1\Part 1.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hunting The Manticore - Boss Battle", "Hunting The Manticore - Boss Battle\Hunting The Manticore - Boss Battle.csproj", "{3BF3A1E8-158E-4E17-9F02-7078A26C2D9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Part 2", "Part 2\Part 2.csproj", "{567A673C-005C-453F-849E-16739CCB8FA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3BF3A1E8-158E-4E17-9F02-7078A26C2D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BF3A1E8-158E-4E17-9F02-7078A26C2D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BF3A1E8-158E-4E17-9F02-7078A26C2D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{567A673C-005C-453F-849E-16739CCB8FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{567A673C-005C-453F-849E-16739CCB8FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{567A673C-005C-453F-849E-16739CCB8FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{567A673C-005C-453F-849E-16739CCB8FA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
