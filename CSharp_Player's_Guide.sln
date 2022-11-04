@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp_Player's_Guide", "CS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Part 1", "Part 1\Part 1.csproj", "{D0C8DC9D-8D79-4F67-9173-9B8C1980D4B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hunting The Manticore - Boss Battle", "Hunting The Manticore - Boss Battle\Hunting The Manticore - Boss Battle.csproj", "{3BF3A1E8-158E-4E17-9F02-7078A26C2D9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hunting The Manticore - Boss Battle", "Hunting The Manticore - Boss Battle\Hunting The Manticore - Boss Battle.csproj", "{3BF3A1E8-158E-4E17-9F02-7078A26C2D9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Part 2", "Part 2\Part 2.csproj", "{567A673C-005C-453F-849E-16739CCB8FA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Part 2", "Part 2\Part 2.csproj", "{567A673C-005C-453F-849E-16739CCB8FA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vin Fletcher Quests --Consolidated", "Vin Fletcher Quests --Consolidated\Vin Fletcher Quests --Consolidated.csproj", "{C65FFDC2-5C8B-4316-B6B6-26855D04E607}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{567A673C-005C-453F-849E-16739CCB8FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{567A673C-005C-453F-849E-16739CCB8FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{567A673C-005C-453F-849E-16739CCB8FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C65FFDC2-5C8B-4316-B6B6-26855D04E607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C65FFDC2-5C8B-4316-B6B6-26855D04E607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C65FFDC2-5C8B-4316-B6B6-26855D04E607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C65FFDC2-5C8B-4316-B6B6-26855D04E607}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
