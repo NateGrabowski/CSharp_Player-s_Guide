@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hunting The Manticore - Bos
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Part 2", "Part 2\Part 2.csproj", "{567A673C-005C-453F-849E-16739CCB8FA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vin Fletcher Quests --Consolidated", "Vin Fletcher Quests --Consolidated\Vin Fletcher Quests --Consolidated.csproj", "{C65FFDC2-5C8B-4316-B6B6-26855D04E607}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter 24 - Boss Battles", "Chapter 24 - Boss Battles\Chapter 24 - Boss Battles.csproj", "{06B4D0E5-7B85-4C5F-9CCA-7D4C9499F0A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{567A673C-005C-453F-849E-16739CCB8FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{567A673C-005C-453F-849E-16739CCB8FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{567A673C-005C-453F-849E-16739CCB8FA5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C65FFDC2-5C8B-4316-B6B6-26855D04E607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C65FFDC2-5C8B-4316-B6B6-26855D04E607}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C65FFDC2-5C8B-4316-B6B6-26855D04E607}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C65FFDC2-5C8B-4316-B6B6-26855D04E607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06B4D0E5-7B85-4C5F-9CCA-7D4C9499F0A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B4D0E5-7B85-4C5F-9CCA-7D4C9499F0A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B4D0E5-7B85-4C5F-9CCA-7D4C9499F0A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B4D0E5-7B85-4C5F-9CCA-7D4C9499F0A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
