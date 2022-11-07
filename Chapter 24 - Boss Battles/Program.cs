@@ -81,3 +81,11 @@ Console.WriteLine("Hello, World!");
  * 
  * */
 #endregion
+
+#region The Password Validator
+//PasswordValidator PasswordValidator = new PasswordValidator();
+//string test = "esGt1&23456";
+//PasswordValidator.CheckPassword();
+
+
+#endregion
