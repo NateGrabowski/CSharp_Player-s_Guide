@@ -4,13 +4,13 @@ using Chapter_24___Boss_Battles;
 Console.WriteLine("Hello, World!");
 
 #region Point
-Point point = new Point(2, 3);
-Point point1 = new Point(-4, 0);
-point.Coordinates();
+//Point point = new Point(2, 3);
+//Point point1 = new Point(-4, 0);
+//point.Coordinates();
 #endregion
 
 #region Color
-Color color = Color.White;
+//Color color = Color.White;
 #endregion
 
 #region Card
@@ -45,33 +45,29 @@ Color color = Color.White;
 
 #region The Locked Door
 
-Door cathedral = new Door();
-//DoorBuddy5000(cathedral);
+//DoorBuddy5000();
 
-string hi = PromptUser();
-
-string PromptUser()
-{
-    return Console.ReadLine();
-}
-
-//void DoorBuddy5000(Door door)
+//void DoorBuddy5000()
 //{
-//    string input = Console.ReadLine();
-//    while (input != "cancel")
+//    Door cathedral = new Door();
+//    string input = "";
+//    Console.WriteLine($"Hello! I am your door! What would you like to do?\n\n");
+//    while (input != "3")
 //    {
+//        Console.WriteLine("Please enter one of the following numbers:\nDoor Action - 1\nChange Password - 2\nCancel - 3");
 //        input = Console.ReadLine();
+//        switch (input)
+//        {
+//            case "1":
+//                cathedral.DoorAction();
+//                break;
+//            case "2":
+//                cathedral.PasswordChange();
+//                break;
+//        }
 
 //    }
-//}
-
-//Door.state DoorActions(Door door)
-//{
-//    return input switch
-//    {
-//        "lock" => door.State = Door.state.Locked,
-//        "cancel" => door.State
-//    };
+//    Console.WriteLine("Have a great day!");
 //}
 
 /* Method CreateDoor()
