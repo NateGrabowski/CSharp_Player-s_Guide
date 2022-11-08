@@ -21,6 +21,7 @@ namespace TicTacToe
             {
                 Console.Title = "Tic-Tac-Toe Console App";
                 DisplayBoard();
+
                 Console.WriteLine("Where would you like to place your input? Use the number pad to guide your choice.");
                 Console.Write($"Player {Turn}: ");
                 int input = Convert.ToInt16(Console.ReadLine());
@@ -54,9 +55,11 @@ namespace TicTacToe
                         PlaceMark(Turn, Section.TopRight);
                         break;
                 }
-                GameStatus();
-                TurnChanger();
+                if (!GameStatus()) { TurnChanger(); }
+
             }
+            DisplayBoard();
+            Console.Write($"Congratulations! Player {Turn} won! ");
         }
         public void PlaceMark(int turn, Section section)
         {
@@ -121,11 +124,11 @@ namespace TicTacToe
         public void DisplayBoard()
         {
             Console.Clear();
-            Console.WriteLine($" {e7} | {e8} |{e9}  "); //top row
+            Console.WriteLine($" {e7} | {e8} | {e9}  "); //top row
             Console.WriteLine($"---+---+---"); //top line
-            Console.WriteLine($" {e4} | {e5} |{e6}  "); //middle row
+            Console.WriteLine($" {e4} | {e5} | {e6}  "); //middle row
             Console.WriteLine($"---+---+---"); //top line //middle line
-            Console.WriteLine($" {e1} | {e2} |{e3}   "); //bottom row
+            Console.WriteLine($" {e1} | {e2} | {e3}   "); //bottom row
         }
 
         public int TurnChanger()
@@ -137,6 +140,7 @@ namespace TicTacToe
         {
             (string, string, string) xWinner = ("X", "X", "X");
             (string, string, string) oWinner = ("O", "O", "O");
+            (string, string, string) Cats = (" ", " ", " ");
 
 
             (string, string, string) BottomRow = (e1, e2, e3);
@@ -159,37 +163,19 @@ namespace TicTacToe
                 LeftDiagonal,
                 RightDiagonal
             };
-
             if (winCon.Contains(xWinner) || winCon.Contains(oWinner))
             {
-                Console.WriteLine($"Player {Turn} has won.");
                 return true;
             }
-            else { return false; }
-
-
-
-
-
-            //(string, string, string) xWinner = ("X", "X", "X");
-            //(string, string, string) oWinner = ("O", "O", "O");
-            //string[] eValue = { e1, e2, e3, e4, e5, e6, e7, e8, e9 };
-            //Array.TrueForAll(xWinner);
-            //for (int i = 0; i < eValue.Length; i++) //magic for loop
+            //else if ((!winCon.Contains(xWinner) && !winCon.Contains(oWinner)) && !winCon.Contains(Cats))
             //{
-
+            //    Console.WriteLine("Cats!");
+            //    return true;
             //}
-
-
-            ////top row
-            //if ((e7, e8, e9).Equals(xWinner)) { Console.WriteLine($"Player {Turn} wins!"); }
-            //if ((e7, e8, e9).Equals(oWinner)) { Console.WriteLine($"Player {Turn} wins!"); }
-            ////middle row
-            //if ((e4, e5, e6).Equals(xWinner)) { Console.WriteLine($"Player {Turn} wins!"); }
-            //if ((e4, e5, e6).Equals(oWinner)) { Console.WriteLine($"Player {Turn} wins!"); }
-            ////bottom row
-            //if ((e1, e2, e3).Equals(xWinner)) { Console.WriteLine($"Player {Turn} wins!"); }
-            //if ((e1, e2, e3).Equals(oWinner)) { Console.WriteLine($"Player {Turn} wins!"); }
+            else
+            {
+                return false;
+            }
         }
 
 

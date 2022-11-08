@@ -9,7 +9,8 @@ using TicTacToe;
 //game1.PlayGame();
 string e1 = "X", e2 = "X", e3 = "X", e4 = "O", e5 = "X", e6 = "O", e7 = "O", e8 = "X", e9 = "O";
 
-Game Game = new
+Game play = new Game();
+play.PlayGame();
 
 //(string, string, string) xWinner = ("X", "X", "X");
 //(string, string, string) oWinner = ("O", "O", "O");
