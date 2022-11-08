@@ -8,8 +8,7 @@ namespace TicTacToe
 {
     public class Game
     {
-        public int Turn = 0; //Player 1 && Player 2 1
-        //private string e1, e2, e3, e4, e5, e6, e7, e8, e9;
+        public int Turn = 1; //Player 1 && Player 2
         private string e1 = " ", e2 = " ", e3 = " ", e4 = " ", e5 = " ", e6 = " ", e7 = " ", e8 = " ", e9 = " ";
         public Input input { get; set; }
         public Section section { get; set; }
@@ -18,7 +17,7 @@ namespace TicTacToe
 
         public void PlayGame()
         {
-            while (true) //result of tie & winner should end game
+            while (!GameStatus()) //result of tie & winner should end game
             {
                 Console.Title = "Tic-Tac-Toe Console App";
                 DisplayBoard();
@@ -55,83 +54,70 @@ namespace TicTacToe
                         PlaceMark(Turn, Section.TopRight);
                         break;
                 }
+                GameStatus();
+                TurnChanger();
             }
         }
         public void PlaceMark(int turn, Section section)
         {
             switch (turn, section)
             {
-                case (0, Section.BottomLeft):
+                case (1, Section.BottomLeft):
                     if (e1 == " ") { e1 = Enum.GetName(Input.X); }
                     break;
-                case (0, Section.BottomMiddle):
+                case (1, Section.BottomMiddle):
                     if (e2 == " ") { e2 = Enum.GetName(Input.X); }
                     break;
-                case (0, Section.BottomRight):
+                case (1, Section.BottomRight):
                     if (e3 == " ") { e3 = Enum.GetName(Input.X); }
                     break;
-                case (0, Section.MiddleLeft):
+                case (1, Section.MiddleLeft):
                     if (e4 == " ") { e4 = Enum.GetName(Input.X); }
                     break;
-                case (0, Section.MiddleMiddle):
+                case (1, Section.MiddleMiddle):
                     if (e5 == " ") { e5 = Enum.GetName(Input.X); }
                     break;
-                case (0, Section.MiddleRight):
+                case (1, Section.MiddleRight):
                     if (e6 == " ") { e6 = Enum.GetName(Input.X); }
                     break;
-                case (0, Section.TopLeft):
+                case (1, Section.TopLeft):
                     if (e7 == " ") { e7 = Enum.GetName(Input.X); }
                     break;
-                case (0, Section.TopMiddle):
+                case (1, Section.TopMiddle):
                     if (e8 == " ") { e8 = Enum.GetName(Input.X); }
                     break;
-                case (0, Section.TopRight):
+                case (1, Section.TopRight):
                     if (e9 == " ") { e9 = Enum.GetName(Input.X); }
                     break;
-                case (1, Section.BottomLeft):
+                case (2, Section.BottomLeft):
                     if (e1 == " ") { e1 = Enum.GetName(Input.O); }
                     break;
-                case (1, Section.BottomMiddle):
+                case (2, Section.BottomMiddle):
                     if (e2 == " ") { e2 = Enum.GetName(Input.O); }
                     break;
-                case (1, Section.BottomRight):
+                case (2, Section.BottomRight):
                     if (e3 == " ") { e3 = Enum.GetName(Input.O); }
                     break;
-                case (1, Section.MiddleLeft):
+                case (2, Section.MiddleLeft):
                     if (e4 == " ") { e4 = Enum.GetName(Input.O); }
                     break;
-                case (1, Section.MiddleMiddle):
+                case (2, Section.MiddleMiddle):
                     if (e5 == " ") { e5 = Enum.GetName(Input.O); }
                     break;
-                case (1, Section.MiddleRight):
+                case (2, Section.MiddleRight):
                     if (e6 == " ") { e6 = Enum.GetName(Input.O); }
                     break;
-                case (1, Section.TopLeft):
+                case (2, Section.TopLeft):
                     if (e7 == " ") { e7 = Enum.GetName(Input.O); }
                     break;
-                case (1, Section.TopMiddle):
+                case (2, Section.TopMiddle):
                     if (e8 == " ") { e8 = Enum.GetName(Input.O); }
                     break;
-                case (1, Section.TopRight):
+                case (2, Section.TopRight):
                     if (e9 == " ") { e9 = Enum.GetName(Input.O); }
                     break;
             }
         }
-
-        //public bool CheckIfSpotTaken()
-        //{
-        //    string[] eValues = { e1, e2, e3, e4, e5, e6, e7, e8, e9 };
-
-
-
-
-        //    //bool isSectionTaken = false;
-        //    //for (int i = 0; i < eValues.Length; i++)
-        //    //{
-        //    //    if (eValues[i] == "X" || eValues[i] == "O") { isSectionTaken = true; }
-        //    //}
-
-        //}
         public void DisplayBoard()
         {
             Console.Clear();
@@ -144,22 +130,68 @@ namespace TicTacToe
 
         public int TurnChanger()
         {
-            return Turn == 0 ? Turn += 1 : Turn -= 1;
+            return Turn == 1 ? Turn += 1 : Turn -= 1;
         }
-        //public void PlaceInput(int turn, Section section)
-        //{
-        //    if (turn == 0) { Console.WriteLine(Input.X); }
-        //    if (turn == 1) { Console.WriteLine(Input.O); }
-        //}
-        //public void BottomLeft() { }
-        //public void BottomMiddle() { }
-        //public void BottomRight() { }
-        //public void MiddleLeft() { }
-        //public void MiddleMiddle() { }
-        //public void MiddleRight() { }
-        //public void TopLeft() { }
-        //public void TopMiddle() { }
-        //public void TopRight() { }
+
+        public bool GameStatus()
+        {
+            (string, string, string) xWinner = ("X", "X", "X");
+            (string, string, string) oWinner = ("O", "O", "O");
+
+
+            (string, string, string) BottomRow = (e1, e2, e3);
+            (string, string, string) MiddleRow = (e4, e5, e6);
+            (string, string, string) TopRow = (e7, e8, e9);
+            (string, string, string) FirstColumn = (e7, e4, e1);
+            (string, string, string) SecondColumn = (e8, e5, e2);
+            (string, string, string) ThirdColumn = (e9, e6, e3);
+            (string, string, string) LeftDiagonal = (e7, e5, e3);
+            (string, string, string) RightDiagonal = (e1, e5, e9);
+
+            object[] winCon =
+            {
+                BottomRow,
+                MiddleRow,
+                TopRow,
+                FirstColumn,
+                SecondColumn,
+                ThirdColumn,
+                LeftDiagonal,
+                RightDiagonal
+            };
+
+            if (winCon.Contains(xWinner) || winCon.Contains(oWinner))
+            {
+                Console.WriteLine($"Player {Turn} has won.");
+                return true;
+            }
+            else { return false; }
+
+
+
+
+
+            //(string, string, string) xWinner = ("X", "X", "X");
+            //(string, string, string) oWinner = ("O", "O", "O");
+            //string[] eValue = { e1, e2, e3, e4, e5, e6, e7, e8, e9 };
+            //Array.TrueForAll(xWinner);
+            //for (int i = 0; i < eValue.Length; i++) //magic for loop
+            //{
+
+            //}
+
+
+            ////top row
+            //if ((e7, e8, e9).Equals(xWinner)) { Console.WriteLine($"Player {Turn} wins!"); }
+            //if ((e7, e8, e9).Equals(oWinner)) { Console.WriteLine($"Player {Turn} wins!"); }
+            ////middle row
+            //if ((e4, e5, e6).Equals(xWinner)) { Console.WriteLine($"Player {Turn} wins!"); }
+            //if ((e4, e5, e6).Equals(oWinner)) { Console.WriteLine($"Player {Turn} wins!"); }
+            ////bottom row
+            //if ((e1, e2, e3).Equals(xWinner)) { Console.WriteLine($"Player {Turn} wins!"); }
+            //if ((e1, e2, e3).Equals(oWinner)) { Console.WriteLine($"Player {Turn} wins!"); }
+        }
+
 
     }
 }
