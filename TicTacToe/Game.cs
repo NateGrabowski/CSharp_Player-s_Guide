@@ -157,14 +157,7 @@
                 LeftDiagonal,
                 RightDiagonal
             };
-            if (winCon.Contains(xWinner) || winCon.Contains(oWinner))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            if (winCon.Contains(xWinner) || winCon.Contains(oWinner)) return true; return false;
         }
     }
 }
