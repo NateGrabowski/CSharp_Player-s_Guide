@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TicTacToe
+﻿namespace TicTacToe
 {
     public class Game
     {
@@ -142,8 +136,6 @@ namespace TicTacToe
         {
             (string, string, string) xWinner = ("X", "X", "X");
             (string, string, string) oWinner = ("O", "O", "O");
-            (string, string, string) Cats = (" ", " ", " "); //can probably implement thing with 9 moves
-
 
             (string, string, string) BottomRow = (e1, e2, e3);
             (string, string, string) MiddleRow = (e4, e5, e6);
@@ -169,17 +161,10 @@ namespace TicTacToe
             {
                 return true;
             }
-            //else if ((!winCon.Contains(xWinner) && !winCon.Contains(oWinner)) && !winCon.Contains(Cats)) 
-            //{
-            //    Console.WriteLine("Cats!");
-            //    return true;
-            //}
             else
             {
                 return false;
             }
         }
-
-
     }
 }
