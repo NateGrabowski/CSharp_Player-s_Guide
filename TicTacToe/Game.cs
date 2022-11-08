@@ -10,6 +10,7 @@ namespace TicTacToe
     {
         public int Turn = 1; //Player 1 && Player 2
         private string e1 = " ", e2 = " ", e3 = " ", e4 = " ", e5 = " ", e6 = " ", e7 = " ", e8 = " ", e9 = " ";
+        public int Moves;
         public Input input { get; set; }
         public Section section { get; set; }
         public enum Input { X, O }
@@ -21,7 +22,7 @@ namespace TicTacToe
             {
                 Console.Title = "Tic-Tac-Toe Console App";
                 DisplayBoard();
-
+                if (Moves == 9) { break; }
                 Console.WriteLine("Where would you like to place your input? Use the number pad to guide your choice.");
                 Console.Write($"Player {Turn}: ");
                 int input = Convert.ToInt16(Console.ReadLine());
@@ -56,10 +57,10 @@ namespace TicTacToe
                         break;
                 }
                 if (!GameStatus()) { TurnChanger(); }
-
             }
             DisplayBoard();
-            Console.Write($"Congratulations! Player {Turn} won! ");
+            if (GameStatus()) { Console.Write($"Congratulations! Player {Turn} won! "); }
+            if (Moves == 9) { Console.WriteLine("It's a tie!"); }
         }
         public void PlaceMark(int turn, Section section)
         {
@@ -120,6 +121,7 @@ namespace TicTacToe
                     if (e9 == " ") { e9 = Enum.GetName(Input.O); }
                     break;
             }
+            Moves += 1;
         }
         public void DisplayBoard()
         {
@@ -140,7 +142,7 @@ namespace TicTacToe
         {
             (string, string, string) xWinner = ("X", "X", "X");
             (string, string, string) oWinner = ("O", "O", "O");
-            (string, string, string) Cats = (" ", " ", " ");
+            (string, string, string) Cats = (" ", " ", " "); //can probably implement thing with 9 moves
 
 
             (string, string, string) BottomRow = (e1, e2, e3);
@@ -167,7 +169,7 @@ namespace TicTacToe
             {
                 return true;
             }
-            //else if ((!winCon.Contains(xWinner) && !winCon.Contains(oWinner)) && !winCon.Contains(Cats))
+            //else if ((!winCon.Contains(xWinner) && !winCon.Contains(oWinner)) && !winCon.Contains(Cats)) 
             //{
             //    Console.WriteLine("Cats!");
             //    return true;
