@@ -11,6 +11,7 @@ while (true)
     Console.WriteLine($"Pack is currently at items {pack.currentItems}/{pack.totalItems}");
     Console.WriteLine("1 - Arrow\n2 - Bow\n3 - Rope\n4 - Water\n5 - Food Ration\n6 - Sword\n7 - Cancel");
     input = Convert.ToInt32(Console.ReadLine());
+
     InventoryItem newItem = input switch
     {
         1 => new Arrow(),
@@ -21,6 +22,7 @@ while (true)
         6 => new Sword()
     };
     pack.Add(newItem);
+    Console.WriteLine($"Current contents of Pack: {pack.ToString()}");
 }
 
 class Pack
@@ -58,6 +60,17 @@ class Pack
         Console.WriteLine("Sorry your inventory is too full to accept that new item!");
         return false;
     }
+    public override string ToString()
+    {
+        string contents = "";
+        foreach (var l in items)
+        {
+            contents += l?.ToString();
+            contents += " ";
+        }
+        return contents;
+    }
+
 }
 
 class InventoryItem : Pack
@@ -71,6 +84,10 @@ class InventoryItem : Pack
         //Weight = weight;
         //Volume = volume;
     }
+    public override string ToString()
+    {
+        return this.GetType().Name;
+    }
 }
 
 class Arrow : InventoryItem
@@ -80,6 +97,7 @@ class Arrow : InventoryItem
     {
 
     }
+
 }
 
 class Bow : InventoryItem

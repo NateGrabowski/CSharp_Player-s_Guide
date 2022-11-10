@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter 24 - Boss Battles",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{AAB5F1A6-6D0B-4C5F-AAB1-2A1E277A6C02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{1E45191E-57F1-4F9D-AA63-39D59AA979DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\Inheritance.csproj", "{1E45191E-57F1-4F9D-AA63-39D59AA979DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{14CDAB27-CBF9-4E36-96CB-B01DA7B39C17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{1E45191E-57F1-4F9D-AA63-39D59AA979DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E45191E-57F1-4F9D-AA63-39D59AA979DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E45191E-57F1-4F9D-AA63-39D59AA979DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14CDAB27-CBF9-4E36-96CB-B01DA7B39C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14CDAB27-CBF9-4E36-96CB-B01DA7B39C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14CDAB27-CBF9-4E36-96CB-B01DA7B39C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14CDAB27-CBF9-4E36-96CB-B01DA7B39C17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
