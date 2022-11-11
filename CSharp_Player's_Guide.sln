@@ -17,9 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe", "TicTacToe\TicT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\Inheritance.csproj", "{1E45191E-57F1-4F9D-AA63-39D59AA979DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{14CDAB27-CBF9-4E36-96CB-B01DA7B39C17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{14CDAB27-CBF9-4E36-96CB-B01DA7B39C17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Old_Robot", "The_Old_Robot\The_Old_Robot.csproj", "{B16E149D-A392-4982-939B-8B6D6AFF16B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "The_Old_Robot", "The_Old_Robot\The_Old_Robot.csproj", "{B16E149D-A392-4982-939B-8B6D6AFF16B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{36E92BE1-FF33-4ACF-AF55-205B4230B229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Structs", "Structs\Structs.csproj", "{99A4F67B-C096-4A7B-809C-E14496A2F953}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Records", "Records\Records.csproj", "{4B78F3F9-78CA-4B68-9080-9F09EB3DAB87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +69,18 @@ Global
 		{B16E149D-A392-4982-939B-8B6D6AFF16B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B16E149D-A392-4982-939B-8B6D6AFF16B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B16E149D-A392-4982-939B-8B6D6AFF16B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36E92BE1-FF33-4ACF-AF55-205B4230B229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36E92BE1-FF33-4ACF-AF55-205B4230B229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36E92BE1-FF33-4ACF-AF55-205B4230B229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36E92BE1-FF33-4ACF-AF55-205B4230B229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A4F67B-C096-4A7B-809C-E14496A2F953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A4F67B-C096-4A7B-809C-E14496A2F953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A4F67B-C096-4A7B-809C-E14496A2F953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A4F67B-C096-4A7B-809C-E14496A2F953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B78F3F9-78CA-4B68-9080-9F09EB3DAB87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B78F3F9-78CA-4B68-9080-9F09EB3DAB87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B78F3F9-78CA-4B68-9080-9F09EB3DAB87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B78F3F9-78CA-4B68-9080-9F09EB3DAB87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
