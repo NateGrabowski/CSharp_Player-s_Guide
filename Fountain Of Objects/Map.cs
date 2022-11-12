@@ -12,8 +12,9 @@ namespace Fountain_Of_Objects
 
 
         //public T[,] gameGrid = new T[3, 3];
-        Object[,] game = new object[3, 3];
+        int[,] game = new int[3, 3];
         StartingZone zone;
+
 
         //public T[,] GameGrid { get => gameGrid; private set => gameGrid = value; }
         //0 {0, 1, 2, 3},
