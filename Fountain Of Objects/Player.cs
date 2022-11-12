@@ -8,6 +8,12 @@ namespace Fountain_Of_Objects
 {
     internal class Player
     {
+        public int X { get; set; }
+        public int Y { get; set; }
+
+        public (int X, int Y) PlayerPosition;
+
+        public void MovePlayerOnMap() { }//function that checks Map to see if I hit any zones
 
     }
 }

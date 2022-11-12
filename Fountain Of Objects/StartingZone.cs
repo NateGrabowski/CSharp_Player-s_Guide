@@ -8,5 +8,8 @@ namespace Fountain_Of_Objects
 {
     internal class StartingZone
     {
+        private string _enterRoom = "You see light coming from the cavern entrance";
+
+        public void EnterRoom() => Console.WriteLine(_enterRoom);
     }
 }

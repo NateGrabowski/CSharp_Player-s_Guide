@@ -6,28 +6,33 @@ using System.Threading.Tasks;
 
 namespace Fountain_Of_Objects
 {
-    internal class Map<T>
+    internal class Map : Player
     {
-        // int[,] gameGrid = { //grid with numbers
-        // {0, 1, 2, 3}, //0
-        // {0, 1, 2, 3}, //1
-        // {0, 1, 2, 3}, //2
-        // {0, 1, 2, 3}  //3
-        ////0  1  2  3
-        //};
 
-        T[,] gameGrid = new T[3, 3];
+
+
+        //public T[,] gameGrid = new T[3, 3];
+        Object[,] game = new object[3, 3];
+        StartingZone zone;
+
+        //public T[,] GameGrid { get => gameGrid; private set => gameGrid = value; }
         //0 {0, 1, 2, 3},
         //1 {0, 1, 2, 3},
         //2 {0, 1, 2, 3},
         //3 {0, 1, 2, 3} 
         //   0  1  2  3
 
+        public Map()
+        {
+            game[0, 0] = Run();
+        }
 
-        //public T[,] CreateGameGrid<T>() //Not sure if this works
-        //{
-        //    return new T[3, 3];
-        //}
+        public void Run()
+        {
+            zone.EnterRoom();
+
+        }
+
 
     }
 }

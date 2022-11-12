@@ -6,12 +6,38 @@ using System.Threading.Tasks;
 
 namespace Fountain_Of_Objects
 {
-    internal interface IPlayerCommands
+    internal class PlayerCommands
     {
 
     }
-    internal class MoveNorth : IPlayerCommands
-    {
 
+    internal class NorthCommand : PlayerCommands
+    {
+        internal NorthCommand(Player p)
+        {
+            p.Y = 1;
+        }
+    }
+
+    internal class SouthCommand : PlayerCommands
+    {
+        internal SouthCommand(Player p)
+        {
+            p.Y -= 1;
+        }
+    }
+    internal class WestCommand : PlayerCommands
+    {
+        internal WestCommand(Player p)
+        {
+            p.X -= 1;
+        }
+    }
+    internal class EastCommand : PlayerCommands
+    {
+        internal EastCommand(Player p)
+        {
+            p.X += 1;
+        }
     }
 }
