@@ -9,5 +9,9 @@ namespace Fountain_Of_Objects
 {
     internal class FountainZone
     {
+        public FountainZone()
+        {
+            Console.WriteLine("You have arrived at the fountain");
+        }
     }
 }

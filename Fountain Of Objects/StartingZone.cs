@@ -12,9 +12,12 @@ namespace Fountain_Of_Objects
 
         public void EnterRoom() => Console.WriteLine(_enterRoom);
 
-        public StartingZone()
+        public StartingZone() //TODO: If fountain is turned on than win game
         {
+            Console.BackgroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Black;
             EnterRoom();
+            Console.ResetColor();
         }
     }
 }

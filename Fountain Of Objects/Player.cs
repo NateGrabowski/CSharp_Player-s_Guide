@@ -8,23 +8,22 @@ namespace Fountain_Of_Objects
 {
     internal class Player
     {
-        public int X { get; set; }
-        public int Y { get; set; }
+        public int X { get; set; } = 0;
+        public int Column { get; set; } = 0;
 
-        public (int X, int Y) PlayerPosition;
+        //public (int X, int Column) PlayerPosition;
 
         Map GameMap;
-        
+
         public Player()
         {
-            X = 0;
-            Y = 0;
+
         }
 
         public void MovePlayerOnMap() //function that checks Map to see if I hit any zones
         {
-            Console.WriteLine(GameMap.gameGrid[X, Y]); 
+            Console.WriteLine(GameMap.gameGrid[X, Column]);
         }
-        
+
     }
 }
