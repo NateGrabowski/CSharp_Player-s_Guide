@@ -8,13 +8,10 @@ namespace Fountain_Of_Objects
 {
     internal class Map : Player
     {
-
-
-
         //public T[,] gameGrid = new T[3, 3];
-        int[,] game = new int[3, 3];
-        StartingZone zone;
-
+        public int[,] gameGrid = new int[4, 4];
+        StartingZone startingzone;
+        FountainZone fountainzone;
 
         //public T[,] GameGrid { get => gameGrid; private set => gameGrid = value; }
         //0 {0, 1, 2, 3},
@@ -23,17 +20,40 @@ namespace Fountain_Of_Objects
         //3 {0, 1, 2, 3} 
         //   0  1  2  3
 
+        public void Run(Player p)
+        {
+            if (p.PlayerPosition == (0, 0))
+            {
+                Console.WriteLine("Starting Room");
+            }
+        }
         public Map()
         {
-            game[0, 0] = Run();
+            gameGrid[0, 0] = 1; //Starting Zone
+            gameGrid[0, 3] = 2; //Fountain  
         }
 
-        public void Run()
+        public void Zone(Player p) 
         {
-            zone.EnterRoom();
-
+            switch (gameGrid[p.X,p.Y])
+            {
+                case 1: //Starting Zone
+                    startingzone = new();
+                    break;
+                default:
+                    break;
+            }
         }
-
-
-    }
+        
+        //public void ZoneLoad(int[,] game, Player p, StartingZone startingZone, FountainZone fountainZone)//switch that goes through specific coordinates and returns zone that was hit
+        //{
+        //    switch (p.PlayerPosition)
+        //    {
+        //        case (0, 0):
+        //            startingzone.EnterRoom();
+        //        default:
+        //            break;
+        //    }
+        //}
+            }
 }

@@ -13,7 +13,18 @@ namespace Fountain_Of_Objects
 
         public (int X, int Y) PlayerPosition;
 
-        public void MovePlayerOnMap() { }//function that checks Map to see if I hit any zones
+        Map GameMap;
+        
+        public Player()
+        {
+            X = 0;
+            Y = 0;
+        }
 
+        public void MovePlayerOnMap() //function that checks Map to see if I hit any zones
+        {
+            Console.WriteLine(GameMap.gameGrid[X, Y]); 
+        }
+        
     }
 }

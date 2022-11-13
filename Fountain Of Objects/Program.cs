@@ -4,5 +4,5 @@
 using Fountain_Of_Objects;
 
 Player player = new Player();
-PlayerCommands command = new NorthCommand(player);
-Console.WriteLine(player.Y);
+Map GameMap = new Map();
+GameMap.Zone(player);

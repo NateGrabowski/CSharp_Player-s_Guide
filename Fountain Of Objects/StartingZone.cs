@@ -11,5 +11,10 @@ namespace Fountain_Of_Objects
         private string _enterRoom = "You see light coming from the cavern entrance";
 
         public void EnterRoom() => Console.WriteLine(_enterRoom);
+
+        public StartingZone()
+        {
+            EnterRoom();
+        }
     }
 }
