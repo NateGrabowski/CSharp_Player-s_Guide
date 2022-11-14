@@ -11,7 +11,7 @@ namespace Fountain_Of_Objects
         public int X { get; set; } = 0;
         public int Y { get; set; } = 0;
 
-        //public (int X, int Column) PlayerPosition;
+        //public (int X, int Y) PlayerPosition;
 
         Map GameMap;
 

@@ -10,7 +10,7 @@ namespace Fountain_Of_Objects
     {
         public bool OutOfBounds(Player p)//TODO: need to implement out of bounds for positive barrier
         {
-            if (p.X < 0 || p.Column < 0 || p.X > 3 || p.Column > 3)
+            if (p.X < 0 || p.Y < 0 || p.X > 3 || p.Y > 3)
             {
                 Console.WriteLine("Out of bounds! I have brought you back to your last room");
                 return true;
@@ -24,10 +24,10 @@ namespace Fountain_Of_Objects
     {
         internal NorthCommand(Player p)
         {
-            p.Column += 1;
+            p.Y += 1;
             if (OutOfBounds(p))
             {
-                p.Column -= 1;
+                p.Y -= 1;
             }
         }
 
@@ -37,10 +37,10 @@ namespace Fountain_Of_Objects
     {
         internal SouthCommand(Player p)
         {
-            p.Column -= 1;
+            p.Y -= 1;
             if (OutOfBounds(p))
             {
-                p.Column += 1;
+                p.Y += 1;
             }
         }
     }

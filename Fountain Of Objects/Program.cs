@@ -25,5 +25,5 @@ while (true)
 
 void GameText()
 {
-    Console.WriteLine($"You are in the room at (Row={player.X}, Column={player.Y}).");
+    Console.WriteLine($"You are in the room at (Row={player.X}, Y={player.Y}).");
 }

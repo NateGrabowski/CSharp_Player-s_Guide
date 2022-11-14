@@ -19,7 +19,7 @@ namespace Fountain_Of_Objects
         //2 {0, 1, 2, 3},
         //3 {0, 1, 2, 3} 
         //   0  1  2  3
-        //Column
+        //Y
 
 
         //public void Run(Player p)
@@ -38,7 +38,7 @@ namespace Fountain_Of_Objects
 
         public void Zone(Player p)
         {
-            switch (gameGrid[p.X, p.Column])
+            switch (gameGrid[p.X, p.Y])
             {
                 case 1: //Starting Zone
                     startingzone = new();
