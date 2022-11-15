@@ -7,11 +7,33 @@ using System.Threading.Tasks;
 
 namespace Fountain_Of_Objects
 {
-    internal class FountainZone
+    internal class FountainZone : Map
     {
+
+        public bool FountainStatus { get; set; }
+
+        public void FountainIsOff() => Console.WriteLine("You hear water dripping in this room. The Fountain of Objects is here!");
+
+        public void FountainIsOn() => Console.WriteLine("You hear the rushing waters from the Fountain of Objects. It has been reactivated!");
+
+
+
         public FountainZone()
         {
-            Console.WriteLine("You have arrived at the fountain");
+
+
+        }
+
+        public void Run()
+        {
+            if (!FountainStatus)
+            {
+                FountainIsOff();
+            }
+            else
+            {
+                FountainIsOn();
+            }
         }
     }
 }

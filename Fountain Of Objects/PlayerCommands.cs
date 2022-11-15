@@ -20,14 +20,26 @@ namespace Fountain_Of_Objects
 
     }
 
+    internal class FountainOnCommand : PlayerCommands
+    {
+
+        internal FountainOnCommand(Player p, Map map)
+        {
+            if (p.X == 0 && p.Y == 2)
+            {
+                map.fountainzone.FountainStatus = true;
+            }
+        }
+    }
+
     internal class NorthCommand : PlayerCommands
     {
         internal NorthCommand(Player p)
         {
-            p.Y += 1;
+            p.X += 1;
             if (OutOfBounds(p))
             {
-                p.Y -= 1;
+                p.X -= 1;
             }
         }
 
@@ -37,17 +49,6 @@ namespace Fountain_Of_Objects
     {
         internal SouthCommand(Player p)
         {
-            p.Y -= 1;
-            if (OutOfBounds(p))
-            {
-                p.Y += 1;
-            }
-        }
-    }
-    internal class WestCommand : PlayerCommands
-    {
-        internal WestCommand(Player p)
-        {
             p.X -= 1;
             if (OutOfBounds(p))
             {
@@ -55,14 +56,25 @@ namespace Fountain_Of_Objects
             }
         }
     }
+    internal class WestCommand : PlayerCommands
+    {
+        internal WestCommand(Player p)
+        {
+            p.Y -= 1;
+            if (OutOfBounds(p))
+            {
+                p.Y += 1;
+            }
+        }
+    }
     internal class EastCommand : PlayerCommands
     {
         internal EastCommand(Player p)
         {
-            p.X += 1;
+            p.Y += 1;
             if (OutOfBounds(p))
             {
-                p.X -= 1;
+                p.Y -= 1;
             }
         }
     }

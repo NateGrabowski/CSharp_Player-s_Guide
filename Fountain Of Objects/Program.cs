@@ -10,7 +10,7 @@ Map GameMap = new Map();
 while (true)
 {
     GameText();
-    GameMap.Zone(player);
+    GameMap.Zone(player, GameMap);
     Console.Write($"What do you want to do? ");
     string input = Console.ReadLine();
     PlayerCommands command = input switch
@@ -18,12 +18,13 @@ while (true)
         "move north" => new NorthCommand(player),
         "move south" => new SouthCommand(player),
         "move east" => new EastCommand(player),
-        "move west" => new WestCommand(player)
+        "move west" => new WestCommand(player),
+        "turn on" => new FountainOnCommand(player, GameMap)
     };
     Console.WriteLine(); //Line break;
 }
 
 void GameText()
 {
-    Console.WriteLine($"You are in the room at (Row={player.X}, Y={player.Y}).");
+    Console.WriteLine($"You are in the room at (Row={player.X}, Column={player.Y}).");
 }

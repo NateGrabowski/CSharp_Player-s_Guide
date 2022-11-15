@@ -10,8 +10,8 @@ namespace Fountain_Of_Objects
     {
         //public T[,] gameGrid = new T[3, 3];
         public int[,] gameGrid = new int[4, 4];
-        StartingZone startingzone;
-        FountainZone fountainzone;
+        public StartingZone startingzone;
+        public FountainZone fountainzone;
 
         //public T[,] GameGrid { get => gameGrid; private set => gameGrid = value; }
         //Row 0 {0, 1, 2, 3},
@@ -32,19 +32,20 @@ namespace Fountain_Of_Objects
         public Map()
         {
             gameGrid[0, 0] = 1; //Starting Zone
-            gameGrid[0, 2] = 2; //Fountain  
+            gameGrid[0, 2] = 2; //Fountain
+            fountainzone = new FountainZone();
 
         }
 
-        public void Zone(Player p)
+        public void Zone(Player p, Map m)
         {
             switch (gameGrid[p.X, p.Y])
             {
                 case 1: //Starting Zone
-                    startingzone = new();
+                    m.startingzone = new();
                     break;
                 case 2: //Fountain Zone
-                    fountainzone = new();
+                    m.fountainzone.Run();
                     break;
                 default:
                     break;
