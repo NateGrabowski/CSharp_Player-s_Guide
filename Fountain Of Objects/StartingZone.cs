@@ -9,15 +9,19 @@ namespace Fountain_Of_Objects
     internal class StartingZone
     {
         private string _enterRoom = "You see light coming from the cavern entrance";
+        private string _endGame = "The Fountain of Objects has been reactivated, and you have escaped with your life!\nYou Win!";
+        public string EnterRoom() => FountainStatus ? _endGame : _enterRoom;
 
-        public void EnterRoom() => Console.WriteLine(_enterRoom);
+        public bool FountainStatus;
+        public StartingZone() { }
 
-        public StartingZone() //TODO: If fountain is turned on than win game
+        public void Run()
         {
             Console.BackgroundColor = ConsoleColor.Yellow;
             Console.ForegroundColor = ConsoleColor.Black;
-            EnterRoom();
+            Console.WriteLine(EnterRoom());
             Console.ResetColor();
+
         }
     }
 }

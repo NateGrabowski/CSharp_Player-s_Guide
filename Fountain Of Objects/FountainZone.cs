@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Fountain_Of_Objects
 {
-    internal class FountainZone : Map
+    internal class FountainZone
     {
 
         public bool FountainStatus { get; set; }

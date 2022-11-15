@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Fountain_Of_Objects
 {
-    internal class Map : Player
+    internal class Map
     {
         //public T[,] gameGrid = new T[3, 3];
-        public int[,] gameGrid = new int[4, 4];
+        public int[,] gameGrid;
         public StartingZone startingzone;
         public FountainZone fountainzone;
 
@@ -31,9 +31,11 @@ namespace Fountain_Of_Objects
         //}
         public Map()
         {
+            gameGrid = new int[4, 4];
+            fountainzone = new FountainZone();
+            startingzone = new StartingZone();
             gameGrid[0, 0] = 1; //Starting Zone
             gameGrid[0, 2] = 2; //Fountain
-            fountainzone = new FountainZone();
 
         }
 
@@ -42,7 +44,7 @@ namespace Fountain_Of_Objects
             switch (gameGrid[p.X, p.Y])
             {
                 case 1: //Starting Zone
-                    m.startingzone = new();
+                    m.startingzone.Run();
                     break;
                 case 2: //Fountain Zone
                     m.fountainzone.Run();

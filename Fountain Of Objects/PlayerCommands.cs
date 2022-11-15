@@ -28,6 +28,7 @@ namespace Fountain_Of_Objects
             if (p.X == 0 && p.Y == 2)
             {
                 map.fountainzone.FountainStatus = true;
+                map.startingzone.FountainStatus = true;
             }
         }
     }
