@@ -7,7 +7,7 @@ Player player = new Player();
 Map GameMap = new Map();
 
 
-while (true)
+while (player.PlayerAlive)
 {
     GameText();
     GameMap.Zone(player, GameMap);

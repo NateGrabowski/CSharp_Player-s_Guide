@@ -10,8 +10,7 @@ namespace Fountain_Of_Objects
     {
         public int X { get; set; }
         public int Y { get; set; }
-
-        //public (int X, int Y) PlayerPosition;
+        public bool PlayerAlive { get; set; } = true; //Pits expansion
 
         Map GameMap;
 

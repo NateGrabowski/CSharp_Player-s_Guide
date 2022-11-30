@@ -60,6 +60,8 @@ class Pack
     }
 }
 
+
+
 class InventoryItem : Pack
 {
     float weight;
